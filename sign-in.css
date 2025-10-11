@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* font family */
+}
+body{
+  background-image: url('photos/Sign-up-bg-image.png');
+  background-size: cover; 
+  background-repeat: no-repeat;             
+  background-position:center;      
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.container{
+    height: 430px;
+    width: 500px;
+    background-color: rgba(180, 188, 239, 0.6) ;
+    border-radius: 15px;
+    transition: 0.3s ease;;
+}
+.container:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 13px 2px #879beb;
+}
+.container p{
+     background-color:  rgba(25, 25, 120,0.7);
+     font-size: 2rem;
+     font-weight: 700;
+     color: whitesmoke;
+     border-radius: 15px;
+}
+form{
+    width: 350px;
+    min-height: 250px;
+    height: auto;
+    background-color: rgba(199, 205, 246, 0.6);
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+form:hover{
+    box-shadow: 0px 0px 13px 2px #879beb;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 560;
+}
+input{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none; /*jab hum input field pr click ktrte hai jab border dikhta hai usko htane k liye use krte hai*/
+}
+form button{
+    border: 2px ;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+    background-color: rgb(8, 107, 168);
+    transition: background-color 0.8s ease;
+    font-size: 1.2rem;
+    font-weight: 540;
+    color: whitesmoke;
+
+}
+form button:hover{
+    background-color:  rgb(25, 25, 120);;
+    scale : 1;
+    box-shadow: 0px 0px 13px 2px #97989c;
+}
+

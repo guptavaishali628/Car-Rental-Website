@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="sign-up.css">
 </head>
 <body>
-        <form id="sign-up-form">
-            <p id="errName"></p>
-            <label>Full Name</label><br>
-            <input type="text" id="signupName" placeholder="enter your full name">
+    <div class="container">
+        <center>
+            <p id="p-title">CAR RENTAL SIGNUP</p>
+        </center><br><br>
+        <center>
+            <form id="sign-up-form">
             
+            <label>Full Name</label><br>
+            <p id="errName"></p>
+            <input type="text" id="signupName" placeholder="please enter your full name">
+            
+            <label>Email</label><br>
             <p id="errEmail"></p>
-            <label>Full Email</label><br>
-            <input type="text" id="signupEmail" placeholder="enter youe email">
+            <input type="text" id="signupEmail" placeholder="please enter your email">
 
-            <p id="errPass"></p>
             <label>Password</label><br>
-            <input type="text" id="signupPass" placeholder="enter strong password">
+            <p id="errPass"></p>
+            <input type="text" id="signupPass" placeholder="please enter strong password">
 
-            <p id="errCpass"></p>
             <label>Confirm Password</label><br>
-            <input type="text" id="signupCpass" placeholder="re-enter password"><br><br>
+            <p id="errCpass"></p>
+            <input type="text" id="signupCpass" placeholder="please re-enter password"><br><br>
 
-            <button type="submit">sign-up</button><br><br>
-            <p>if you've already account?<a href="sign-in.html">sign-in</a></p>
-
-        </form>  
+            <button type="submit" onclick=" return signUp()">sign-up</button><br><br>
+            <pre>if you've already account?<a href="sign-in.html" style="color: rgb(6, 6, 192); font-size: 1.1rem;"> sign-in</a></pre>
+       </form>
+    </center> 
+     </div>    
 </body>
 <script src="Script.js"></script>
 </html>

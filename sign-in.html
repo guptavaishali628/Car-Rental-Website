@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-in</title>
+    <title>Login</title>
     <link rel="stylesheet" href="sign-in.css">
 </head>
 <body>
+    <div class="container">
+        <center>
+            <p>CAR RENTAL LOGIN</p>
+        </center><br><br>
+        <center>
+            <form id="sign-up-form">
+            <label>Email</label><br>
+            <input type="text" id="signinEmail" placeholder="please enter your email">
 
+            <label>Password</label><br>
+            <input type="text" id="signinPass" placeholder="please enter strong password"><br><br>
+
+            <button type="submit" onclick="return login()">sign-in</button><br><br>
+            <pre>if you haven't account?<a href="sign-up.html" style="color: rgb(6, 6, 192); font-size: 1.1rem;"> sign-up</a></pre>
+       </form>
+    </center> 
+    </div>    
 </body>
-<script src="Script.js"></script> 
+<script src="Script.js"></script>
 </html>
