@@ -1,0 +1,211 @@
+
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* font family */
+    border: border-box;
+}
+body{
+    color: whitesmoke;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main-header{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+/*----------------------------Home Section------------------------------------------------------------*/
+.homeSection{
+    background-image: url("photos/home-bg.jpg");
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+/*------------------------------------------navbar section-----------------------------------------------------*/
+ul{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  gap: 80px;
+  padding-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    position: relative;
+    display: inline-block;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #eee1ad;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav{
+    height: 11%;
+    width: 100%;
+    background-color: rgba(20, 30, 80, 0.85);
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    position: fixed;
+}
+.signup-login-btn{
+    padding-top: 25px;
+    padding-right: 2.4%;
+    display: flex;
+    align-items: self-start;
+    gap: 45px;
+}
+.signup-login-btn button{
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 400;
+}
+.signup-login-btn button:hover{
+    background-color: #eee1ad;
+    scale: 1;
+    box-shadow: 0px 0px 13px 2px #97989c;
+}
+
+/*----------------------------------------------------about Section----------------------------------------*/
+.aboutSection{
+    width: 100%;
+    min-height: 580px;
+    height: auto;
+   /* background-color: whitesmoke;*/
+    background-color: whitesmoke;
+    display: flex;
+    align-items:self-start;
+    justify-content: space-around;
+    
+}
+.aboutUsContent{
+    width: 440px;
+    height: 480px;
+    margin-top: 4%;
+    border-radius: 20px;
+}
+#p-aboutUs{
+    font-size: 3.7rem;
+    color: black;
+    font-weight: 400;
+    font-family: serif;
+    
+}
+#p-aboutInfo{
+    color: #0000009b;
+    font-size: 1.05rem;
+    font-family: serif;
+}
+.Image-Div{
+    background-image: url("photos/aboutSection-image");
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+}
+.Image-Div:hover{
+    scale: 1.05;
+    transition: 0.3 ease-in-out;
+}
+.experience{
+    display: grid;
+    row-gap: 40px;
+}
+.experience-year{
+    height: 120px;
+    width: 92%;
+    border-radius: 20px;
+    background-color: rgb(4, 4, 92);
+    position: relative;
+    left: 8%;
+    padding-top: 20px;
+}
+.CarImage{
+    height: 300px;
+    width: 92%;
+    background-image: url("photos/aboutSection-image2");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    left: 8%;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+}
+.CarImage:hover{
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+
+/*------------------------------------------------best offer section-----------------------------------------*/
+.bestOfferSection{
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.bestOfferText{
+    height: 100%;
+    width: 50%;
+    background-color: rgba(34, 47, 115);
+    padding-left: 35px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.bestOfferbtn{
+    height: 50px;
+    width: 110px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: 400;
+    padding-left: 12px;
+    padding-top: 1.8%;
+}
+.bestOfferbtn:hover{
+    background-color: #eee1ad;
+    scale: 1;
+    box-shadow: 0px 0px 13px 2px #97989c;
+}
+.bestOfferImage{
+    height: 233.5px;
+    width: 50%;
+    background-image: url("photos/offerCar");
+    background-position: center;
+    background-size: cover;
+    padding-left: 35px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    transition: 0.3s ease-in-out;
+}
+.bestOfferImage:hover{
+    scale: 1.02;
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+
+}

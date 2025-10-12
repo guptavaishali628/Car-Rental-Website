@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
+<div class="main-header">
+    <!-------------------------------------Home page-------------------------------------------------->
+    <div class="homeSection" style="background-color: red;">
+        
+        <nav>
+           
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Vehicles</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            
+            <div class="signup-login-btn">
+                 <button onclick="return signUp()">Sign-Up</button>
+                 <button onclick="return login()">Login</button>
+                 <button>Logout</button>
+            </div>     
+       
+        </nav>
     
+    </div>
+    <!--------------------------------------About Section------------------------------------------------------->
+    <div class="aboutSection">
+        
+        <div class="aboutUsContent" style="width: 540px;">
+            <p id="p-aboutUs">About Us</p><br><br>
+            
+            <p id="p-aboutInfo">Welcome to "RideNow", your trusted partner for convenient, affordable, and reliable 
+            car rental services. Whether you're traveling for the business,leisure, or need a vehicle for daily use, 
+            we offer a wide range of well-maintained cars to suit your needs.Committed to quality and excellent service, 
+            we ensure every vehicle is clean, safe, and ready for your journey.Our user-friendly booking process and 
+            dedicated support team make renting hassle-free.</p><br><br>
+
+            <p id="p-aboutInfo">Our mission is to make your rental experience seamless and enjoyable, providing flexible booking options,
+             competitive pricing, and exceptional customer service. We prioritize safety, comfort, and transparency in every rental,
+             ensuring you drive away with confidence.</p><br><br>
+
+             <p id="p-aboutInfo">At "RideNow", we believe in going the extra mile to deliver quality vehicles and 
+                personalized solutions. Thank you for choosing us as your go-to car rental service.</p>
+
+        </div>
+        
+        <div class="Image-Div aboutUsContent"></div>
+        
+        <div class="experience aboutUsContent">
+            <div class="experience-year" style="text-align: center;" >
+                <p style="font-size: 3.2rem; font-family: serif;">+10 Years</p>
+                <p style="font-size: 1.7rem; font-family: serif;">Experience</p>
+            </div>
+            <div class="CarImage"></div>
+        </div>
+    </div>
+    <!-----------------------------best offer section----------------------------------------------------------->
+    <div class="bestOfferSection">
+        <div class="bestOfferText">
+            <p style="font-size: 3.7rem; font-family: serif; font-weight: 400; color: whitesmoke;">Best Offer</p><br><br>
+            <p style="font-size: 2rem; font-family: serif; font-weight: 350; color: whitesmoke;">Bently Flying Spur</p>
+            <p style="font-size: 2rem; font-family: serif; font-weight: 350; color: whitesmoke;">for $400/day</p><br><br>
+            <button class="signup-login-btn bestOfferbtn">Rent Now</button>
+        </div>
+        <div class="bestOfferImage"></div>
+        
+    </div>
+
+</div>    
 </body>
-<script src="Script.js"></script>
+<script src="home.js"></script>
 </html>
