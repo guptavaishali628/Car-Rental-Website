@@ -1,8 +1,9 @@
 
 *{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif; /* font family */
+    font-family: serif; /* font family */
     border: border-box;
+    font-size: 1.07rem;
 }
 body{
     color: whitesmoke;
@@ -178,16 +179,14 @@ nav{
 }
 
 .bestOfferbtn{
-    height: 50px;
-    width: 110px;
+    height: 45px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.09rem;
     color: #000000;
     font-weight: 400;
-    padding-left: 12px;
-    padding-top: 1.8%;
+    padding: 14px 14px 14px 14px;
 }
 .bestOfferbtn:hover{
     background-color: #eee1ad;
@@ -244,21 +243,60 @@ nav{
 }
 .vehicles-scrollbar-child{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: grid;
     grid-auto-flow: column;
     gap: 1rem;
 }
 .vehicleImage{
     height: 400px;
-    width: 380px;
+    width: 370px;
     border-radius: 20px;
     border: 2px solid rgb(47, 64, 153);
     background-position: center;
     background-size: cover;
     transition: 0.3s ease-in-out;
+    margin: 20px 20px 20px 20px;
 }
-.ve:hover{
+.vehicleImage:hover{
     scale: 1.05;
     transition: 0.3s ease-in-out;
+    box-shadow: 0 0 6px 6px rgb(24, 38, 108);
+}
+.vehicles-scrollbar-child p{
+    color: black;
+    margin: 50px 50px 50px 50px;
+}
+.vehicles-scrollbar-child button{
+    border: 2px solid rgb(47,64,153);
+    margin-top: 46%;
+    margin-left: 60%;
+}
+/*-----------------------------Contact us section------------------------------------------*/
+footer{
+    min-height: 450px;
+    height: auto;
+    width: 100%;
+    background-color: rgb(1, 1, 58);
+}
+.footer-parent-div{
+    width: 96%;
+    min-height: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer-child-div{
+    min-width:200px;
+    height: 280px;
+    font-size: 1.07rem;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
 }

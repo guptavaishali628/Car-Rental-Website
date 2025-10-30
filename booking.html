@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="main-booking-header">
+        <!--------------------------------------navbar------------------------------------------>
+        
+        <nav>
+           <center><p>Book Your Rental Car</p></center>
+         </nav>
+         
+         <div class="booking-form-text-main">
+         <div class="booking-form-text" style="border-bottom-left-radius: 25px; border-top-left-radius: 25px;">
+            <form>
+                
+                <label>Name</label><br>
+                <p id="errBname"></p>
+                <input type="text" id="Bname" placeholder="Enter you Name"><br>
+
+                <label>Contact Number</label><br>
+                <p id="errBnumber"></p>
+                <input type="text" id="Bnumber" placeholder="Enter your Contact Number"><br>
+
+                <label>Driver's License Number</label><br>
+                <p id="errBlicense"></p>
+                <input type="text" id="Blicense" placeholder="Enter you License Number"><br>
+
+                <label>City</label>
+                <p id="errBcity">
+                <select id="Bcity">
+                    <option value="Select">Select your City</option>
+                    <option value="Bhopal">Bhopal</option>
+                    <option value="Indore">Indore</option>
+                    <option value="Ujjain">Ujjain</option>
+                    <option value="Gwalior">Gwalior</option>
+                    <option value="Jhanshi">Jhanshi</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                </select><br>
+
+                <label>Enter your Pickup Location</label><br>
+                <p id="errBpickup"></p>
+                <input type="text" id="Bpickup" placeholder="Enter your Pickup-Location"><br>
+
+                <label>Enter your Drop-off Location</label><br>
+                <p id="errBdropoff"></p>
+                <input type="text" id="Bpickup" placeholder="Enter your Pickup-Location"><br>
+
+                <label>Select your Pickup Date</label><br>
+                <p id="errBpickup-date"></p>
+                <input type="date" id="Bpickup-date"><br>
+
+                <label>Select your Pickup Time</label><br>
+                <p id="errBpickup-time"></p>
+                <input type="time" id="Bpickup-time"><br>
+
+                <label>Select your Return Date</label><br>
+                <p id="errBreturn-date"></p>
+                <input type="date" id="Breturn-date"><br>
+
+                <label>Select your Drop-off Time</label><br>
+                <p id="errBreturn-time"></p>
+                <input type="time" id="Breturn-time"><br>
+
+                <label>Vehicle</label><br>
+                <p id="errBvehicle">
+                <select id="Bvehicle">
+                    <option value="Select">Select your fav Vehicle</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Harrier">Harrier</option>
+                    <option value="Thar">Thar</option>
+                    <option value="Defender">Defender</option>
+                    <option value="Kia">Kia</option>
+                    <option value="XUV-300">XUV-300</option>
+                </select><br>
+
+                <label>Number of People</label><br>
+                <p id="errBpeople"></p>
+                <input type="text" id=" Bpeople"><br><br>
+
+                <button type="submit">Book Now</button>
+            
+            </form>
+        </div>
+        <div class="booking-form-text" style="border-bottom-right-radius: 25px; border-top-right-radius: 25px;"></div>
+        </div>
+    </div>
+</body>
+<script src="Local.js"></script>
+<script src="home.js"></script>
+</html>

@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--------------------link for AOS library for animation in js----------------------------->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <div class="main-header">
     <!-------------------------------------Home page-------------------------------------------------->
-    <div class="homeSection" style="background-color: red;">
+    <div class="homeSection" style="background-color: red;" id="Home">
         
         <nav>
            
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">Contact Us</a></li>
+            <ul data-aos="fade-right" data-aos-duration="2000">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Vehicle">Vehicles</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="dashBoard.html">Dashboard</a></li>
+                <li><a href="#Footer">Contact Us</a></li>
             </ul>
             
-            <div class="signup-login-btn">
+            <div class="signup-login-btn" data-aos="fade-left" data-aos-duration="2000">
                  <button onclick="return signUp()">Sign-Up</button>
                  <button onclick="return login()">Login</button>
-                 <button>Logout</button>
+                 <button onclick="logout()">Logout</button>
             </div>     
-       
         </nav>
+        <div id="LuxuryCarRental" style="padding-top: 10%; padding-left: 35px;">
+            <p style="font-size: 4rem; font-family: serif;" data-aos="fade-down" data-aos-duration="3000">Luxury car<br>rental in India</p><br><br>
+            <button class="bestOfferbtn" style="padding: 14px 14px 14px 14px" data-aos="fade-down" data-aos-duration="2000" onclick="rentNow()">Rent Now</button>
+        </div>
     
     </div>
     <!--------------------------------------About Section------------------------------------------------------->
-    <div class="aboutSection">
+    <div class="aboutSection" id="About">
         
         <div class="aboutUsContent" style="width: 540px;">
             <p id="p-aboutUs">About Us</p><br><br>
@@ -54,7 +61,7 @@
         <div class="Image-Div aboutUsContent"></div>
         
         <div class="experience aboutUsContent">
-            <div class="experience-year" style="text-align: center;" >
+            <div class="experience-year" style="text-align: center;"  data-aos="fade-left" data-aos-duration="2000">
                 <p style="font-size: 3.2rem; font-family: serif;">+10 Years</p>
                 <p style="font-size: 1.7rem; font-family: serif;">Experience</p>
             </div>
@@ -66,35 +73,110 @@
         <div class="bestOfferText">
             <p style="font-size: 3.7rem; font-family: serif; font-weight: 400; color: whitesmoke;">Best Offer</p><br><br>
             <p style="font-size: 2rem; font-family: serif; font-weight: 350; color: whitesmoke;">Bently Flying Spur</p>
-            <p style="font-size: 2rem; font-family: serif; font-weight: 350; color: whitesmoke;">for $400/day</p><br><br>
-            <button class="signup-login-btn bestOfferbtn">Rent Now</button>
+            <p style="font-size: 2rem; font-family: serif; font-weight: 350; color: whitesmoke;">for Rs.1200/day</p><br><br>
+            <button class="signup-login-btn bestOfferbtn" onclick="rentNow()">Rent Now</button>
         </div>
         <div class="bestOfferImage"></div>
         
     </div>
     <!---------------------------------Vehicles section--------------------------------------------------------->
-    <div class="vehicleSection">
+    <div class="vehicleSection" id="Vehicle">
         <div class="vehicleText">
             <p style="font-size: 3.7rem; font-family: serif; font-weight: 400; color: rgb(0, 0, 0);">Vehicles</p><br><br>
             <p style="font-size: 1.5rem; font-family: serif; color: #0000009b; margin-top: 27px; padding-left:35px;">Choose your ride from our luxury fleet...</p>
         </div>
         <div class="vehicles-scrollbar-parent">
         <div class="vehicles-scrollbar-child">
-            <a><div class="vehicleImage" style=" background-image: url(photos/VehicleImg1.jpg)"></div></a>
-            <a><div class="vehicleImage" style="background-image: url(photos/VehicleImg2.jpg);"></div>
-            <a><div class="vehicleImage" style="background-image: url(photos/VehicleImg3.jpg);"></div>
-            <a><div class="vehicleImage" style="background-image: url(photos/VehicleImg4.jpg);"></div>
-            <a><div class="vehicleImage" style="background-image: url(photos/VehicleImg5.jpg);"></div>
-            <a><div class="vehicleImage"></div>
-            <a><div class="vehicleImage"></div>
-            <a><div class="vehicleImage"></div>
-            <a><div class="vehicleImage"></div>
-            <div class="vehicleImage"></div>
+            <a href="#"><div class="vehicleImage" style=" background-image: url(photos/VehicleImg1.jpg)">
+                <p>McLaren 720S<br>for Rs.1200/day</p>
+                <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button>
+            </div></a>
+            <a href="#"><div class="vehicleImage" style="background-image: url(photos/VehicleImg2.jpg);">
+               <p>Mercedes-AMG GT<br>for Rs.1200/day</p>
+               <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button> 
+            </div></a>
+            <a href="#"><div class="vehicleImage" style="background-image: url(photos/VehicleImg3.jpg);">
+               <p> BMW M4<br>for Rs.1200/day</p>
+               <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button> 
+            </div></a>
+            <a href="#"><div class="vehicleImage" style="background-image: url(photos/VehicleImg4.jpg);">
+               <p>Tata Harrier<br>for Rs.1200/day</p>
+               <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button> 
+            </div></a>
+            <a href="#"><div class="vehicleImage" style="background-image: url(photos/VehicleImg5.jpg);">
+               <p>Land Rover Defender,<br>for Rs.1200/day</p>
+               <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button> 
+            </div></a>
+            <a href="#"><div class="vehicleImage" style="background-image: url();" onclick="rentNow()">
+               <p>Mercedes-AMG GT<br>for Rs.1200/day</p>
+               <button class="bestOfferbtn" style="padding: 10px 10px 10px 10px" onclick="rentNow()">Rent Now</button> 
+            </div></a>
+            <a href="#"><div class="vehicleImage"></div></a>
+            <a href="#"><div class="vehicleImage"></div></a>
         </div>
         </div>  
     </div>
+    <!----------------------------------contact us section--------------------------------------------->
+    <footer id="Footer">
+    
+    <a href="#Home"><div style="width: 100%; height: 8vh; background-color: rgb(46, 56, 106); align-content: center; padding:  0 50% 0 50%; font-size: 1.3rem; font-weight: 400;">Back to top</div></a>    
+    
+    <div class="footer-parent-div" id="footer-parent-div">
+        
+        <div class="footer-child-div">
+            <p style="font-size: 1.3rem; font-size: 400;">Contact Us</p><br>
+            <a href="#"><p><i class="fa-solid fa-paper-plane"></i>ridenow2025@gmail.com</p><br></a>
+            <a href="#"><p><i class="fa-solid fa-square-phone"></i>1800-30-90</p></a>
+        </div>
+        
+        <div class="footer-child-div">
+            <p style="font-size: 1.3rem; font-size: 400;">About Us</p><br>
+            <a href="#"><p>Company Info</p><br></a>
+            <a href="#"><p>Blog</p><br></a>
+            <a href="#"><p>News & Blog</p><br></a>
+            <a href="#"><p>Become Relations</p><br></a>
+            <a href="#"><p>Investors</p></a>
+        </div>
+        
+        <div class="footer-child-div">
+            <p style="font-size: 1.3rem; font-size: 400;">Car Rental Services</p><br>
+            <a href="#"><p>Fleet & models</p><br></a>
+            <a href="#"><p>Airport Rentals</p><br></a>
+            <a href="#"><p>Airy Reron Business</p><br></a>
+            <a href="#"><p>City Rentals</p><br></a>
+            <a href="#"><p>Long-Term Rental</p><br></a>
+            <a href="#"><p>Special Offers</p></a>
+        </div>
+        
+        <div class="footer-child-div">
+            <p style="font-size: 1.3rem; font-size: 400;">Payment Options</p><br>
+            <a href="#"><p>Credit-Debit Card</p><br></a>
+            <a href="#"><p>Online & Points</p><br></a>
+            <a href="#"><p>Online Payment Gateways</p><br></a>
+            <a href="#"><p>Invocing</p><br></a>
+            <a href="#"><p>Gift Cards</p></a>
+        </div>
+        
+        <div class="footer-child-div">
+            <p style="font-size: 1.3rem; font-size: 400;">Customer Help</p><br>
+            <a href="#"><p>FAQS</p><br></a>
+            <a href="#"><p>Contact US</p><br></a>
+            <a href="#"><p>Rental Terms</p><br></a>
+            <a href="#"><p>Privacy Policy</p><br></a>
+            <a href="#"><p>Roadside Assistance</p><br></a>
+            <a href="#"><p>Help</p></a>
+        </div>
+    </div><br>
+    <hr>
+       <center><p style="padding-top: 8px; padding-bottom: 8px;"><i class="fa-solid fa-copyright" style="padding: 8px;"></i>RideNow Since 2025. All rights are Reserved</p></center>
+    </footer>
 
 </div>    
 </body>
 <script src="home.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
 </html>

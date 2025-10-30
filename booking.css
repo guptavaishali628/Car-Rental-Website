@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    font-family: serif; /* font family */
+    border: border-box;
+}
+body{
+    color: whitesmoke;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url("photos/bookingFormImg.jpg");
+    background-size:cover;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main-booking-header{
+    height: 800px;
+    display: block;
+    background: linear-gradient(to top, rgba(30, 30, 179, 0.3)20%, rgb(137, 137, 196,0.4)40%, rgba(255,255,255,0.4)70%)
+}
+
+nav{
+    height: 11%;
+    width: 100%;
+    background-color: rgba(20,30,80,0.85);
+    position: fixed;
+    z-index: 999;
+}
+nav p{
+    font-size: 3rem;
+    color: whitesmoke;
+    font-family: serif;
+    margin-top: 4px;
+}
+.booking-form-text-main{
+    min-height: 600px;
+    height: auto;
+    width:70%;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-evenly;
+    position: absolute;     /*div ko center main lane k liye*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5%;
+    margin-bottom: 3%;
+    border-radius: 25px;
+}
+.booking-form-text{
+    min-height: 550px;
+    height: auto;
+    width: 480px;
+    background-color: rgba(34, 47, 115,0.88);
+    border-radius: 20px;
+}
