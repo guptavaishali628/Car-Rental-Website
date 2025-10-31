@@ -25,3 +25,14 @@ let rentNow=()=>{
     location.href = "booking.html";
     return false;
 }
+
+
+let booking=()=>{
+    if(localStorage.getItem("Name")==null){
+        alert("please Sign Up!")
+        location.href="sign-up.html"
+    }
+    else{
+        location.href = "booking.html"
+    }
+}

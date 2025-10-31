@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Form</title>
     <link rel="stylesheet" href="booking.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <!------------------------style for animation---------------------------->
 </head>
 <body>
-    <div class="main-booking-header">
-        <!--------------------------------------navbar------------------------------------------>
-        
-        <nav>
-           <center><p>Book Your Rental Car</p></center>
-         </nav>
-         
-         <div class="booking-form-text-main">
-         <div class="booking-form-text" style="border-bottom-left-radius: 25px; border-top-left-radius: 25px;">
-            <form>
+    <div class="booking-form-text-main">
+        <div class="booking-form-text">
+           <center><form>
                 
-                <label>Name</label><br>
+                <label>Full Name</label><br>
                 <p id="errBname"></p>
                 <input type="text" id="Bname" placeholder="Enter you Name"><br>
 
@@ -51,23 +46,15 @@
 
                 <label>Enter your Drop-off Location</label><br>
                 <p id="errBdropoff"></p>
-                <input type="text" id="Bpickup" placeholder="Enter your Pickup-Location"><br>
+                <input type="text" id="BdropOff" placeholder="Enter your Pickup-Location"><br>
 
                 <label>Select your Pickup Date</label><br>
-                <p id="errBpickup-date"></p>
-                <input type="date" id="Bpickup-date"><br>
-
-                <label>Select your Pickup Time</label><br>
-                <p id="errBpickup-time"></p>
-                <input type="time" id="Bpickup-time"><br>
+                <p id="errBpickupDate"></p>
+                <input type="date" id="BpickupDate"><br>
 
                 <label>Select your Return Date</label><br>
-                <p id="errBreturn-date"></p>
-                <input type="date" id="Breturn-date"><br>
-
-                <label>Select your Drop-off Time</label><br>
-                <p id="errBreturn-time"></p>
-                <input type="time" id="Breturn-time"><br>
+                <p id="errBreturnDate"></p>
+                <input type="date" id="BreturnDate"><br>
 
                 <label>Vehicle</label><br>
                 <p id="errBvehicle">
@@ -85,16 +72,43 @@
 
                 <label>Number of People</label><br>
                 <p id="errBpeople"></p>
-                <input type="text" id=" Bpeople"><br><br>
+                <input type="text" id="Bpeople" placeholder="Enter number of people"><br>
 
-                <button type="submit">Book Now</button>
+                <input type="submit" value="Book Now" onclick="return book()" style="cursor: pointer; width: 20%;" class="btn"></input>
             
-            </form>
+            </form></center>
         </div>
-        <div class="booking-form-text" style="border-bottom-right-radius: 25px; border-top-right-radius: 25px;"></div>
+        <div class="booking-form-text">
+            <p style="font-size: 4rem; font-family: serif; margin-top: 8%;" data-aos="fade-down" data-aos-duration="3000">Book your rental car <br> on "RideNow".</p><br><br>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(photos/VehicleImg1.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(photos/VehicleImg2.jpg);"></div>
+                    <div class="swiper-slide" style="background-image: url(photos/VehicleImg3.jpg);"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <p style="font-size: 1.5rem; font-family: serif; margin-top: 8%; background-color: rgba(255, 166, 0, 0.895); display: inline-block; margin-left: 8px; padding: 8px; border-radius: 10px;">Unlock Exclusive Offers! Up 30% Off On Your Next Rental..</p>
         </div>
     </div>
 </body>
-<script src="Local.js"></script>
-<script src="home.js"></script>
+<script src="Crud.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // for autoplay
+      autoplay: {
+        delay: 2500,
+        // jab cursor slide pr jayega to ruk jayega slide if it is true:
+        disableOnInteraction: true,
+      }
+    });
+</script>
 </html>
