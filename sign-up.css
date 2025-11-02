@@ -3,7 +3,7 @@
     font-family: serif; /* font family */
 }
 body{
-  background-image: url('photos/Sign-up-bg-image.png');
+  background-image: url('photos/bookingFormImg.jpg');
   background-size: cover; 
   background-repeat: no-repeat;             
   background-position:center;      
@@ -11,13 +11,26 @@ body{
   display: grid;
   place-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.sign-up-main-div{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(34, 47, 115,0.88);
 }
 .container{
     height: 550px;
     width: 500px;
     background-color: rgba(26, 39, 101, 0.7);
     border-radius: 15px;
-     transition: 0.3s ease;;
+    border: 2px solid whitesmoke;
+    transition: 0.3s ease;
+    position: absolute;     /*div ko center main lane k liye*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
 }
 .container:hover{
     scale: 1.1;
@@ -29,6 +42,7 @@ body{
      font-weight: 700;
      color: whitesmoke;
      border-radius: 15px;
+     border: 2px solid whitesmoke;
 }
 form{
     width: 350px;

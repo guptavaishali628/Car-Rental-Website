@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Form</title>
     <link rel="stylesheet" href="booking.css">
+    <!-----------------------swiper library--------------------------------->
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
-    <!------------------------style for animation---------------------------->
+    <!--------------------------AOS library------------------------------------>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="booking-form-text-main">
         <div class="booking-form-text">
-           <center><form>
+           <center><form data-aos="fade-down" data-aos-duration="2000">
                 
                 <label>Full Name</label><br>
                 <p id="errBname"></p>
@@ -79,8 +82,8 @@
             </form></center>
         </div>
         <div class="booking-form-text">
-            <p style="font-size: 4rem; font-family: serif; margin-top: 8%;" data-aos="fade-down" data-aos-duration="3000">Book your rental car <br> on "RideNow".</p><br><br>
-            <div class="swiper mySwiper">
+            <p style="font-size: 4rem; font-family: serif; margin-top: 8%;" data-aos="fade-down" data-aos-duration="2000">Book your rental car <br> on "RideNow".</p><br><br>
+            <div class="swiper mySwiper" data-aos="fade-left" data-aos-duration="2000">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-image: url(photos/VehicleImg1.jpg);"></div>
                     <div class="swiper-slide" style="background-image: url(photos/VehicleImg2.jpg);"></div>
@@ -94,7 +97,10 @@
     </div>
 </body>
 <script src="Crud.js"></script>
+<!--------------------swiper lib js link---------------->
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!--------------------AOS lib js link---------------->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
     var swiper = new Swiper(".mySwiper", {
@@ -110,5 +116,6 @@
         disableOnInteraction: true,
       }
     });
+    AOS.init()
 </script>
 </html>

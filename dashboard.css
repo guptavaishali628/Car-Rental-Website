@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    font-family: serif; /* font family */
+    border: border-box;
+}
+body{
+    color: whitesmoke;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+    background-image: url("photos/bookingFormImg.jpg");
+    background-size:cover;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.dashboard-main-div{
+    height: 100vh;
+    display: block;
+    background-color: rgba(34, 47, 115,0.88);
+}
+table{
+    min-width: 96%;
+    min-height: auto;
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    right: 2%;
+    border: 2px solid whitesmoke;
+    text-align: center;
+}
+table tr{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+table td{
+  padding: 10px ;  /* gives space between boundaries and content */
+  font-size: 1.07rem;
+}

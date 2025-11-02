@@ -1,31 +1,17 @@
 {
   "CarRental": [
     {
-      "id": "1",
-      "Bname": "Vaishali Gupta",
-      "Bnumber": 9026578017,
-      "Blicense": "10223345",
-      "Bcity": "bhopal",
-      "Bpickup": "mp nagar",
-      "BdropOff": "indrapuri",
-      "BpickupDate": "01-10-2025",
-      "BreturnDate": "01-10-2025",
-      "Bvehicle": "Tata",
-      "Bpeople": 2,
-      "Price": "1200"
-    },
-    {
-      "id": "6b21",
+      "id": "c61e",
       "Bname": "vaishali gupta",
       "Bnumber": "9026578017",
       "Blicense": "1245617",
-      "Bcity": "Jhanshi",
-      "Bpickup": "",
-      "BdropOff": "",
-      "BpickupDate": "",
-      "BreturnDate": "",
+      "Bcity": "Select",
+      "Bpickup": "indrapuri",
+      "BdropOff": "indrapuri",
+      "BpickupDate": "2025-11-14",
+      "BreturnDate": "2025-11-28",
       "Bvehicle": "Select",
-      "Bpeople": "",
+      "Bpeople": "2",
       "Price": 1200
     }
   ]
