@@ -25,7 +25,7 @@ let fetchData = async()=>{
             <td>${e.Bpeople}</td>
             <td>${e.Price}</td>
             <td onclick="del('${e.id}')"><i class="fa fa-trash" aria-hidden="true"></i></td>
-            <td onclick="formopen('${e.id}')><i class="fa-solid fa-pen"></i></td>
+            <td onclick="formopen('${e.id}')"><i class="fa-solid fa-pen"></i></td>
         </tr>
         
         `
@@ -85,8 +85,6 @@ let book=()=>{
     return false
 }
 
-//fetchData() ----> already call on body by "onload()":
-
 let formopen=async(id)=>{
     let show = document.querySelector("#formshow");
     
@@ -102,15 +100,15 @@ let formopen=async(id)=>{
            <center><form data-aos="fade-down" data-aos-duration="2000">
                 
                 <label>Full Name</label><br>
-                <input type="text" id="Bname" placeholder="Enter you Name" value="${data.Name}"><br>
+                <input type="text" id="upBname" placeholder="Enter you Name" value="${data.Name}"><br>
 
                 <label>Contact Number</label><br>
-                <input type="text" id="Bnumber" placeholder="Enter your Contact Number" value="${data.Number}"><br>
+                <input type="text" id="ipBnumber" placeholder="Enter your Contact Number" value="${data.Number}"><br>
 
                 <label>Driver's License Number</label><br>
-                <input type="text" id="Blicense" placeholder="Enter you License Number" value="${data.License}"><br>
+                <input type="text" id="upBlicense" placeholder="Enter you License Number" value="${data.License}"><br>
 
-                <label>City</label>
+                <label>City</label><br>
                 <select id="Bcity>
                     <option value="Select">Select your City</option>
                     <option value="Bhopal">Bhopal</option>
@@ -125,16 +123,16 @@ let formopen=async(id)=>{
                 </select><br>
 
                 <label>Enter your Pickup Location</label><br>
-                <input type="text" id="Bpickup" placeholder="Enter your Pickup-Location" value="${data.Pickup}"><br>
+                <input type="text" id="upBpickup" placeholder="Enter your Pickup-Location" value="${data.Pickup}"><br>
 
                 <label>Enter your Drop-off Location</label><br>
-                <input type="text" id="BdropOff" placeholder="Enter your Pickup-Location" value="${data.Dropoff}"><br>
+                <input type="text" id="upBdropOff" placeholder="Enter your Pickup-Location" value="${data.Dropoff}"><br>
 
                 <label>Select your Pickup Date</label><br>
-                <input type="date" id="BpickupDate" value="${data.PickupDate}"><br>
+                <input type="date" id="upBpickupDate" value="${data.PickupDate}"><br>
 
                 <label>Select your Return Date</label><br>
-                <input type="date" id="BreturnDate" value="${data.ReturnDate}"><br>
+                <input type="date" id="upBreturnDate" value="${data.ReturnDate}"><br>
 
                 <label>Vehicle</label><br>
                 <select id="Bvehicle">
@@ -150,7 +148,7 @@ let formopen=async(id)=>{
                 </select><br>
 
                 <label>Number of People</label><br>
-                <input type="text" id="Bpeople" placeholder="Enter number of people" value="${data.People}"><br>
+                <input type="text" id="upBpeople" placeholder="Enter number of people" value="${data.People}"><br>
 
                 <input type="submit" value="Update Now" onclick="return update('${data.id}')" style="cursor: pointer; width: 20%;" class="btn"></input>
             
@@ -158,3 +156,47 @@ let formopen=async(id)=>{
         </div>
     `
 }
+
+//PUT method
+
+let update=(id)=>{
+    let Name = document.querySelector("#upBname").value.trim()
+    let Number = document.querySelector("#upBnumber").value.trim()
+    let License = document.querySelector("#upBlicense").value.trim()
+    let City = document.querySelector("#upBcity").value.trim()
+    let Pickup = document.querySelector("#upBpickup").value.trim()
+    let Dropoff = document.querySelector("#upBdropOff").value.trim()
+    let PickupDate = document.querySelector("#upBpickupDate").value.trim()
+    let ReturnDate = document.querySelector("#upBreturnDate").value.trim()
+    let Vehicle = document.querySelector("#upBvehicle").value.trim()
+    let People = document.querySelector("#upBpeople").value.trim()
+ 
+    //PUT method:
+    let api=`http://localhost:3000/CarRental/${id}`
+
+    fetch(api,{
+        method:"PUT",
+        headers:{
+
+        "Content-type":"application/json"    
+        },
+        
+        body: json.stringify({
+            Bname:Name,
+            Bnumber:Number,
+            Blicense:License,
+            Bcity:City,
+            Bpickup:Pickup,
+            BdropOff:Dropoff,
+            BpickupDate:PickupDate,
+            BreturnDate:ReturnDate,
+            Bvehicle:Vehicle,
+            Bpeople:People,
+            Price:1200
+        })
+    })
+    location.href="Dashboard.html"
+
+}
+
+//fetchData() ----> already call on body by "onload()":

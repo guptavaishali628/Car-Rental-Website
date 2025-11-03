@@ -15,7 +15,8 @@ html{
     scroll-behavior: smooth;
 }
 .dashboard-main-div{
-    height: 100vh;
+    min-height: 120vh;
+    height: auto;
     display: block;
     background-color: rgba(34, 47, 115,0.88);
 }
@@ -36,4 +37,53 @@ table tr{
 table td{
   padding: 10px ;  /* gives space between boundaries and content */
   font-size: 1.07rem;
+}
+
+ .formshow{
+    min-height: auto;
+    min-width:50%;
+    position: absolute;     /*div ko center main lane k liye*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+
+form{
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    margin: 8px;
+    width: 60%;
+    height: 80%;
+}
+form label{
+    font-size: 1.2rem;
+    font-weight: 560;
+
+}
+form input{
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none; 
+}
+form select{
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none; 
+}
+
+.btn:hover{
+    background-color: #eee1ad;
+    scale: 1;
+    box-shadow: 0px 0px 13px 2px #97989c;
 }
