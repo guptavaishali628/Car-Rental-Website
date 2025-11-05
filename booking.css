@@ -15,7 +15,7 @@ html{
     scroll-behavior: smooth;
 }
 .main-booking-header{
-    height: 800px;
+    min-height: 100%;
     display: block;
     background: linear-gradient(to top, rgba(30, 30, 179, 0.3)20%, rgb(137, 137, 196,0.4)40%, rgba(255,255,255,0.4)70%)
 }

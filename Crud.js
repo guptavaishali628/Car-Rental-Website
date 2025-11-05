@@ -100,16 +100,16 @@ let formopen=async(id)=>{
            <center><form data-aos="fade-down" data-aos-duration="2000">
                 
                 <label>Full Name</label><br>
-                <input type="text" id="upBname" placeholder="Enter you Name" value="${data.Name}"><br>
+                <input type="text" id="upBname" placeholder="Enter you Name" value="${data.Bname}"><br>
 
                 <label>Contact Number</label><br>
-                <input type="text" id="ipBnumber" placeholder="Enter your Contact Number" value="${data.Number}"><br>
+                <input type="text" id="upBnumber" placeholder="Enter your Contact Number" value="${data.Bnumber}"><br>
 
                 <label>Driver's License Number</label><br>
-                <input type="text" id="upBlicense" placeholder="Enter you License Number" value="${data.License}"><br>
+                <input type="text" id="upBlicense" placeholder="Enter you License Number" value="${data.Blicense}"><br>
 
                 <label>City</label><br>
-                <select id="Bcity>
+                <select id="upBcity">
                     <option value="Select">Select your City</option>
                     <option value="Bhopal">Bhopal</option>
                     <option value="Indore">Indore</option>
@@ -123,19 +123,19 @@ let formopen=async(id)=>{
                 </select><br>
 
                 <label>Enter your Pickup Location</label><br>
-                <input type="text" id="upBpickup" placeholder="Enter your Pickup-Location" value="${data.Pickup}"><br>
+                <input type="text" id="upBpickup" placeholder="Enter your Pickup-Location" value="${data.Bpickup}"><br>
 
                 <label>Enter your Drop-off Location</label><br>
-                <input type="text" id="upBdropOff" placeholder="Enter your Pickup-Location" value="${data.Dropoff}"><br>
+                <input type="text" id="upBdropOff" placeholder="Enter your Pickup-Location" value="${data.BdropOff}"><br>
 
                 <label>Select your Pickup Date</label><br>
-                <input type="date" id="upBpickupDate" value="${data.PickupDate}"><br>
+                <input type="date" id="upBpickupDate" value="${data.BpickupDate}"><br>
 
                 <label>Select your Return Date</label><br>
-                <input type="date" id="upBreturnDate" value="${data.ReturnDate}"><br>
+                <input type="date" id="upBreturnDate" value="${data.BreturnDate}"><br>
 
                 <label>Vehicle</label><br>
-                <select id="Bvehicle">
+                <select id="upBvehicle">
                     <option value="Select">Select your fav Vehicle</option>
                     <option value="BMW">BMW</option>
                     <option value="Tata">Tata</option>
@@ -148,7 +148,7 @@ let formopen=async(id)=>{
                 </select><br>
 
                 <label>Number of People</label><br>
-                <input type="text" id="upBpeople" placeholder="Enter number of people" value="${data.People}"><br>
+                <input type="text" id="upBpeople" placeholder="Enter number of people" value="${data.Bpeople}"><br>
 
                 <input type="submit" value="Update Now" onclick="return update('${data.id}')" style="cursor: pointer; width: 20%;" class="btn"></input>
             
@@ -181,7 +181,7 @@ let update=(id)=>{
         "Content-type":"application/json"    
         },
         
-        body: json.stringify({
+        body: JSON.stringify({
             Bname:Name,
             Bnumber:Number,
             Blicense:License,
@@ -194,7 +194,8 @@ let update=(id)=>{
             Bpeople:People,
             Price:1200
         })
-    })
+    }
+)
     location.href="Dashboard.html"
 
 }

@@ -1,18 +1,3 @@
 {
-  "CarRental": [
-    {
-      "id": "5762",
-      "Bname": "vaishali gupta",
-      "Bnumber": "9026578017",
-      "Blicense": "1245617",
-      "Bcity": "Select",
-      "Bpickup": "indrapuri",
-      "BdropOff": "indrapuri",
-      "BpickupDate": "2025-11-14",
-      "BreturnDate": "2025-11-28",
-      "Bvehicle": "Select",
-      "Bpeople": "2",
-      "Price": 1200
-    }
-  ]
+  "CarRental": []
 }

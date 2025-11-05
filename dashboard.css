@@ -19,14 +19,12 @@ html{
     height: auto;
     display: block;
     background-color: rgba(34, 47, 115,0.88);
+    padding-top: 2%;
+    padding-left: 4%;
 }
 table{
     min-width: 96%;
     min-height: auto;
-    position: absolute;
-    top: 3%;
-    left: 2%;
-    right: 2%;
     border: 2px solid whitesmoke;
     text-align: center;
 }
@@ -42,18 +40,14 @@ table td{
  .formshow{
     min-height: auto;
     min-width:50%;
-    position: absolute;     /*div ko center main lane k liye*/
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 25px;
 }
 
 form{
     border-radius: 10px;
     border: 2px solid whitesmoke;
-    margin: 8px;
-    width: 60%;
+    margin: 2%;
+    width: 30%;
     height: 80%;
 }
 form label{
