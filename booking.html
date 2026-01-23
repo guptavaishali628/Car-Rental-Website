@@ -96,26 +96,34 @@
         </div>
     </div>
 <script src="Crud.js"></script>
-<!--------------------swiper lib js link---------------->
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<!--------------------AOS lib js link---------------->
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Swiper Initialize
     var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      // for autoplay
-      autoplay: {
-        delay: 2500,
-        // jab cursor slide pr jayega to ruk jayega slide if it is true:
-        disableOnInteraction: true,
-      }
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false  
+        },
+        loop: true,       
+        effect: 'fade'    
     });
-    AOS.init()
+    
+    // AOS Initialize
+    AOS.init({
+        duration: 2000,    
+        once: true,        
+        offset: 100        
+    });
+});
 </script>
 </body>
 </html>
