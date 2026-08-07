@@ -17,22 +17,33 @@
         <nav>
             <p style="margin-top: 15px; font-size: 2.5rem; margin-left: 30px;" data-aos="fade-right" data-aos-duration="2000"><i class="fa-solid fa-car-side" style="margin: 8px; font-size: 2rem;"></i>RideNow</p>
 
-
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+           
             <ul data-aos="fade-down" data-aos-duration="2000">
+                <div class="close-menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-times"></i>
+                </div>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#About">About Us</a></li>
                 <li><a href="#Vehicle">Vehicles</a></li>
                 <li><a href="#" onclick="booking()">Booking</a></li>
                 <li><a href="dashBoard.html" target="_blank">Dashboard</a></li>
                 <li><a href="#Footer">Contact Us</a></li>
-            </ul>
-            
-
-            <div class="signup-login-btn" data-aos="fade-left" data-aos-duration="2000">
-                 <button onclick="return signUp()">Sign-Up</button>
-                 <button onclick="return login()">Login</button>
-                 <button onclick="logout()">Logout</button>
-            </div>     
+                <div class="menu-auth-buttons">
+                    <button onclick="signUp(); toggleMenu(); return false;">Sign-Up</button>
+                    <button onclick="login(); toggleMenu(); return false;">Login</button>
+                    <button onclick="logout(); toggleMenu(); return false;">Logout</button>
+                </div>
+            </ul> 
+            <div class="signup-login-btn desktop-only">
+                <button onclick="signUp()">Sign-Up</button>
+                <button onclick="login()">Login</button>
+                <button onclick="logout()">Logout</button>
+            </div>   
         </nav>
         <div id="LuxuryCarRental" style="padding-top: 10%; padding-left: 35px;">
             <p style="font-size: 4rem; font-family: serif;" data-aos="fade-down" data-aos-duration="2000">Luxury car<br>rental in India</p><br><br>
